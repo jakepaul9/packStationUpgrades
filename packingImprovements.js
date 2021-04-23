@@ -8,7 +8,7 @@ let barcodeFlag = true
 const barcodeCheck = ["TC-CARRIER","TC-PRO","AF11-CA","AF-11FX-DUP-H","AF-11FX-DUP-L","AF-11FX-H","AF-11FX-L","POE-WM","POE-15-12W","POE-24-12W","POE-24-12W-G","POE-24-24W","POE-24-24W-G","POE-24-30W","POE-24-AF5X","POE-48-24W","POE-48-24W-G","POE-50-60W","POE-54V-80W","POE-24-7W-G-WH","POE-24-12W-5P","POE-24-24W-5P","EP-54V-150W-AC","EP-54V-150W-DC","UDC-1","UDC-2","UDC-3","UF-RJ45-1G","UF-RJ45-10G","UF-MM-1G","UF-MM-10G","UF-MM-1G-20","UF-MM-10G-20","UF-SM-10G-20","UF-SM-10G","UF-SM-1G-S","UF-SM-1G-S-20","UF-SM-10G-S-20","UF-SM-10G-S","UF-GP-C+","NS-WM","AFi-P-HD-RM","PBE-5AC-GEN2-FEED-US","PBE-5AC-400-ISO-US","PBE-5AC-ISO-GEN2-US","UB-AM"];
 
 document.addEventListener('keydown', function(e) {
-  alert('hello you happy');
+  alert('hello you happy people');
   let items = document.getElementsByClassName('view-item-name')
   if (barcodeFlag & items.length > 0) {
     for (item of items) {
