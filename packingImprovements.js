@@ -12,13 +12,13 @@ document.addEventListener('keydown', function(e) {
   let items = document.getElementsByClassName('view-item-name')
   if (barcodeFlag & items.length > 0) {
     for (item of items) {
-    if(barcodeCheck.includes(item.innerHTML.toUpperCase())){
-      let brcd = document.createElement('img');
-      brcd.src = `https://www.webarcode.com/barcode/image.php?code=${item.innerHTML}&type=C128B&xres=1&height=50&width=167&font=3&output=png&style=68`;
-      brcd.width = '200'
-      brcd.style='margin:0px 10px 0px 10px;'
-      item.appendChild(brcd);
-}
+        if(barcodeCheck.includes(item.innerHTML.toUpperCase())){
+            let brcd = document.createElement('img');
+            brcd.src = `https://www.webarcode.com/barcode/image.php?code=${item.innerHTML}&type=C128B&xres=1&height=50&width=167&font=3&output=png&style=68`;
+            brcd.width = '200'
+            brcd.style='margin:0px 10px 0px 10px;'
+            item.appendChild(brcd);
+        }
     }
     barcodeFlag = false;
   }
