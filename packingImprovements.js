@@ -219,7 +219,6 @@ const aliases = [
 
 
 document.addEventListener('keydown', function(e) {
-  console.log(e.keyCode)
   let items = document.getElementsByClassName('view-item-name')
   if (barcodeFlag && items.length > 0) {
     for (item of items) {
@@ -295,7 +294,6 @@ document.addEventListener('keydown', function(e) {
   let m = $('#modal-editbox').hasClass('md-show')
   m ? str += e.key.replace(/[^0-9]/g, '') : null
   if (m && e.keyCode == 13) {
-    alert('hello')
     let boxes = document.getElementsByClassName('list_boxtype')[1].childNodes;
     for (let i = 0; i < boxes.length; i++) {
       if (boxes[i].tagName == 'LI' && boxes[i].nodeType != Node.TEXT_NODE) {
