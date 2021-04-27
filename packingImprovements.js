@@ -215,11 +215,13 @@ const aliases = [
       oldSku: "817882020541",
       newSku: "UDC-3"
     }
-  ]
+  ];
+
+
 document.addEventListener('keydown', function(e) {
-//   alert('yes')
+  console.log(e.keyCode)
   let items = document.getElementsByClassName('view-item-name')
-  if (barcodeFlag & items.length > 0) {
+  if (barcodeFlag && items.length > 0) {
     for (item of items) {
         if(barcodeCheck.includes(item.innerHTML.toUpperCase())){
             let brcd = document.createElement('img');
@@ -231,14 +233,18 @@ document.addEventListener('keydown', function(e) {
     }
     barcodeFlag = false;
   }
-  if(e.target.value && e.keyCode == 13){
-  for(alias of aliases){
-    if(e.target.value && e.target.value.toUpperCase() == alias.oldSku.toUpperCase()){
-        e.target.value = alias.newSku.toUpperCase();
-        console.log(e.target.value)
+  if(items.length > 0 && e.target.value && e.keyCode == 13){
+    for(item of items){
+      if(e.target.value != item.innerHTML.toUpperCase()){
+        for(alias of aliases){
+          if(e.target.value && e.target.value.toUpperCase() == alias.oldSku.toUpperCase()){
+              e.target.value = alias.newSku.toUpperCase();
+              console.log(e.target.value)
+          }
+        }
+      }
     }
   }
-}
   //Scanning Multiple MAC Addresses
   if (e.target.id == 'scannedMACAddress' && (e.keyCode == 13 || e.keyCode == 17 || e.keyCode == 74)) {
     if (e.target.value && e.target.value.toUpperCase().includes('MAC_END')) {
@@ -289,6 +295,7 @@ document.addEventListener('keydown', function(e) {
   let m = $('#modal-editbox').hasClass('md-show')
   m ? str += e.key.replace(/[^0-9]/g, '') : null
   if (m && e.keyCode == 13) {
+    alert('hello')
     let boxes = document.getElementsByClassName('list_boxtype')[1].childNodes;
     for (let i = 0; i < boxes.length; i++) {
       if (boxes[i].tagName == 'LI' && boxes[i].nodeType != Node.TEXT_NODE) {
