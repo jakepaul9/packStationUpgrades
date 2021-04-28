@@ -263,6 +263,7 @@ document.addEventListener('keydown', function(e) {
           if(e.target.value && e.target.value.toUpperCase() == alias.oldSku.toUpperCase()){
               e.target.value = alias.newSku.toUpperCase();
               console.log(e.target.value)
+              break;
           }
         }
       }
