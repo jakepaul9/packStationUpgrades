@@ -283,7 +283,9 @@ document.addEventListener('keydown', function(e) {
   }
   if (e.target.value && e.target.value.includes("MAC_END") && e.keyCode == 13) {
     e.preventDefault()
-    return false
+//     let tempStr = e.target.value
+//       e.target.value = tempStr.replace(",MAC_END", "")
+//     return false
   }
 
   //Scan barcode to get weight
