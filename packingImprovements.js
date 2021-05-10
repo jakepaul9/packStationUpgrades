@@ -252,7 +252,8 @@ const aliases = [
 
 document.addEventListener('keydown', function(e) {
   let items = document.getElementsByClassName('view-item-name')
-  if (barcodeFlag && items.length > 0 && e.target.value.includes('SCREEN_SCAN')) {
+  if (barcodeFlag && items.length > 0 && e.target.value.includes('SCREEN_SCAN') && e.key == 'Enter') {
+    
     for (item of items) {
         if(barcodeCheck.includes(item.innerHTML.toUpperCase())){
             let brcd = document.createElement('img');
