@@ -5,7 +5,7 @@ Date: 04/11/2020
 
 let str = '';
 let barcodeFlag = true
-const barcodeCheck = ["UF-RJ45-1G","UF-RJ45-10G","UF-MM-1G","UF-MM-10G","UF-MM-1G-20","UF-MM-10G-20","UF-SM-10G-20","UF-SM-10G","UF-SM-1G-S","UF-SM-1G-S-20","UF-SM-10G-S-20","UF-SM-10G-S","UF-GP-C+","PBE-5AC-GEN2-FEED-US","PBE-5AC-400-ISO-US","PBE-5AC-ISO-GEN2-US","UB-AM","POE-WM","AFi-P-HD-RM","AF11-CA","AF-11FX-DUP-H","AF-11FX-DUP-L","AF-11FX-H","AF-11FX-L"]
+const barcodeCheck = ["nanoHD-RetroFit-3","UVC-G3-F-PENDANT","UF-RJ45-1G","UF-RJ45-10G","UF-MM-1G","UF-MM-10G","UF-MM-1G-20","UF-MM-10G-20","UF-SM-10G-20","UF-SM-10G","UF-SM-1G-S","UF-SM-1G-S-20","UF-SM-10G-S-20","UF-SM-10G-S","UF-GP-C+","PBE-5AC-GEN2-FEED-US","PBE-5AC-400-ISO-US","PBE-5AC-ISO-GEN2-US","UB-AM","POE-WM","AFi-P-HD-RM","AF11-CA","AF-11FX-DUP-H","AF-11FX-DUP-L","AF-11FX-H","AF-11FX-L"]
 const aliases = [
   {
     oldSku: "NSM5 US",
@@ -257,8 +257,7 @@ document.addEventListener('keydown', function(e) {
     for (item of items) {
         if(barcodeCheck.includes(item.innerHTML.toUpperCase())){
             let brcd = document.createElement('img');
-            brcd.src = `https://www.webarcode.com/barcode/image.php?code=${item.innerHTML}&type=C128B&xres=1&height=50&width=167&font=3&output=png&style=68`;
-//             brcd.src = `https://www.cognex.com/api/Sitecore/Barcode/Get?data=${item.innerHTML}&code=BCL_CODE128&width=300&imageType=JPG&foreColor=%23000000&backColor=%23FFFFFF&rotation=RotateNoneFlipNone`
+            brcd.src = `https://www.webarcode.com/barcode/image.php?code=${item.innerHTML}&type=C128B&xres=1&height=50&width=167&font=3&output=png&style=68`;             brcd.src = `https://www.cognex.com/api/Sitecore/Barcode/Get?data=${item.innerHTML}&code=BCL_CODE128&width=300&imageType=JPG&foreColor=%23000000&backColor=%23FFFFFF&rotation=RotateNoneFlipNone`
             brcd.width = '200'
             brcd.style='margin:0px 10px 0px 10px;'
             item.appendChild(brcd);
