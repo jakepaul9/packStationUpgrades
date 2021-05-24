@@ -261,7 +261,8 @@ document.addEventListener('keydown', function(e) {
     for (item of items) {
         if(barcodeCheck.includes(item.innerHTML.toUpperCase())){
             let brcd = document.createElement('img');
-            brcd.src = `https://www.webarcode.com/barcode/image.php?code=${item.innerHTML}&type=C128B&xres=1&height=50&width=167&font=3&output=png&style=68`;             brcd.src = `https://www.cognex.com/api/Sitecore/Barcode/Get?data=${item.innerHTML}&code=BCL_CODE128&width=300&imageType=JPG&foreColor=%23000000&backColor=%23FFFFFF&rotation=RotateNoneFlipNone`
+            brcd.src = `https://www.cognex.com/api/Sitecore/Barcode/Get?data=${item.innerHTML}&code=BCL_CODE128&width=300&imageType=JPG&foreColor=%23000000&backColor=%23FFFFFF&rotation=RotateNoneFlipNone`
+            //brcd.src = `https://www.webarcode.com/barcode/image.php?code=${item.innerHTML}&type=C128B&xres=1&height=50&width=167&font=3&output=png&style=68`;
             brcd.width = '200'
             brcd.style='margin:0px 10px 0px 10px;'
             item.appendChild(brcd);
