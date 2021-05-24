@@ -8,6 +8,10 @@ let barcodeFlag = true
 const barcodeCheck = ["nanoHD-RetroFit-3","UVC-G3-F-PENDANT","UF-RJ45-1G","UF-RJ45-10G","UF-MM-1G","UF-MM-10G","UF-MM-1G-20","UF-MM-10G-20","UF-SM-10G-20","UF-SM-10G","UF-SM-1G-S","UF-SM-1G-S-20","UF-SM-10G-S-20","UF-SM-10G-S","UF-GP-C+","PBE-5AC-GEN2-FEED-US","PBE-5AC-400-ISO-US","PBE-5AC-ISO-GEN2-US","UB-AM","POE-WM","AFi-P-HD-RM","AF11-CA","AF-11FX-DUP-H","AF-11FX-DUP-L","AF-11FX-H","AF-11FX-L"]
 const aliases = [
   {
+    oldSku: "LOCOM5 US",
+    newSku: "LOCOM5(US)"
+  },
+  {
     oldSku: "NSM5 US",
     newSku: "NSM5(US)"
   },
