@@ -283,6 +283,15 @@ document.addEventListener('keydown', function(e) {
               break;
           }
         }
+        if(mappedItems){
+          for(item of mappedItems){
+            if(e.target.value && e.target.value.toUpperCase() == item.oldSku.toUpperCase()){
+                e.target.value = item.newSku.toUpperCase();
+                console.log(e.target.value)
+                break;
+            }
+          }
+        }
       }
     }
   }
