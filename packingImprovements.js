@@ -255,7 +255,6 @@ const aliases = [
 
 
 document.addEventListener('keydown', function(e) {
-  console.log(custAliases);
   let items = document.getElementsByClassName('view-item-name')
   if (items.length > 0 && e.target.value && e.key == 'Enter') {
     if(e.target.value.includes('SCREEN_SCAN')){
