@@ -6,7 +6,7 @@ Date: 04/11/2020
 let str = "";
 let barcodeFlag = true;
 const barcodeCheck = [
-  "NANOHD-RetroFit-3",
+  "NANOHD-RETROFIT-3",
   "UVC-G3-F-PENDANT",
   "UF-RJ45-1G",
   "UF-RJ45-10G",
@@ -293,7 +293,7 @@ document.addEventListener("keydown", function (e) {
           brcd.style = "margin:0px 10px 0px 10px;";
           item.appendChild(brcd);
         }
-        if (screenBarcodes) {
+//         if (screenBarcodes) {
           if (screenBarcodes.includes(item.innerHTML.toUpperCase())) {
             let brcd = document.createElement("img");
             //             brcd.src = `https://www.cognex.com/api/Sitecore/Barcode/Get?data=${item.innerHTML}&code=BCL_CODE128&width=500&imageType=JPG&foreColor=%23000000&backColor=%23FFFFFF&rotation=RotateNoneFlipNone`
@@ -302,7 +302,7 @@ document.addEventListener("keydown", function (e) {
             brcd.style = "margin:0px 10px 0px 10px;";
             item.appendChild(brcd);
           }
-        }
+//         }
       }
       e.preventDefault();
     }
