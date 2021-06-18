@@ -106,7 +106,7 @@ document.addEventListener("keydown", function(e) {
 
     let items = document.getElementsByClassName("view-item-name");
     if (items.length > 0 && e.target.value && e.key == "Enter") {
-        if (e.target.value.includes("SCREEN_SCAN")) {
+        if (e.target.value.toUpperCase().includes("SCREEN_SCAN")) {
         console.log('screen_scan');
             for (item of items) {
                 if (barcodeCheck.includes(item.innerHTML.toUpperCase())) {
